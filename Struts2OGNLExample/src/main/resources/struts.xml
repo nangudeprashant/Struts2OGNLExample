@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.devMode" value="false"></constant>
+	<constant name="struts.convention.result.path" value="/"></constant>
+	<package name="user" namespace="/" extends="struts-default">
+		<!-- <action name=""> <result>/first.jsp</result> </action> -->
+		<action name="">
+			<result>/index.jsp</result>
+		</action>
+		<action name="numericAction"
+			class="com.javalive.actions.NumericAction">
+			<result name="success"> WEB-INF\jsp\nextNumeric.jsp </result>
+		</action>
+
+		<action name="collectionAction"
+			class="com.javalive.actions.CollectionAction">
+			<result name="success"> WEB-INF\jsp\nextCollection.jsp </result>
+		</action>
+
+	</package>
+
+</struts>
